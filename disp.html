@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+  <!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="disp.css">
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!--<title>Dashboard Sidebar Menu</title>--> 
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <i class='bx bxl-amazon icon' ></i>
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Produtos</span>
+                    <span class="profession">Products</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+               
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="index.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="disp.html">
+                            <i class='bx bxl-amazon icon' ></i>
+                            <span class="text nav-text">Disp. Amazon</span>
+                        </a>
+                    </li>
+
+
+
+
+                    
+
+                </ul>
+            </div>
+
+
+        </div>
+
+    </nav>
+
+    <section class="home">
+        <div class="text">Dispositivos Amazon</div>
+        <div class="home">
+            <div class="card">
+                <a href="https://www.amazon.com.br/gp/product/B07SG8F1QF?ref_=gw_ATF_echoshow8&pf_rd_r=ETCA9VJQDM923EANTHSE&pf_rd_p=576f83b0-cfc0-4148-8820-455b0b2ee0f0&pd_rd_r=aaf15fbf-bf25-4076-9b42-7ba0c8019a20&pd_rd_w=DcaQB&pd_rd_wg=8DHmu">
+                <img src="echo8.jpg" alt="Echo Show 8" style="width:100%">
+                <div class="container">
+                  <h4><b>Echo Show 8 1ª Geração </b></h4>
+                  <p>Smart Speaker com tela de 8" e Alexa</p>
+                </div>
+            </a>
+              </div>
+              <div class="echo15">
+                <a href="https://www.amazon.com.br/dp/B08MQL92QM?ref_=nav_em_br_echo_nav_0_2_7_10">
+                <img src="echo15.jpg" alt="Echo Show 15" style="width:100%">
+                <div class="echo15c">
+                  <h4><b>Echo Show 15 </b></h4>
+                  <p>Smart Display Full HD de 15,6" com Alexa</p>
+                </div>
+            </a>
+              </div>
+              <div class="kindle">
+                <a href="https://www.amazon.com.br/dp/B07FQK1TS9">
+                <img src="kindle.jpg" alt="Kindle" style="width:100%">
+                <div class="kindlec">
+                  <h4><b>Kindle 10ª Geração</b></h4>
+                  <p>Com bateria de longa duração-Cor Preto</p>
+                </div>
+            </a>
+              </div>
+              <div class="echo4">
+                <a href="https://www.amazon.com.br/gp/product/B07SG8F1QF?ref_=gw_ATF_echoshow8&pf_rd_r=ETCA9VJQDM923EANTHSE&pf_rd_p=576f83b0-cfc0-4148-8820-455b0b2ee0f0&pd_rd_r=aaf15fbf-bf25-4076-9b42-7ba0c8019a20&pd_rd_w=DcaQB&pd_rd_wg=8DHmu">
+                <img src="echo4.jpg" alt="Echo Show 8" style="width:100%">
+                <div class="echo4c">
+                  <h4><b>Echo 4ª Geração </b></h4>
+                  <p>Com som premium, Hub de casa inteligente e Alexa - Cor Preta</p>
+                </div>
+            </a>
+              </div>
+        </div>
+    </section>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+</body>
+</html>
